@@ -71,4 +71,6 @@ footer {
 }
 .profile-photo {
     width: 100%;
+    border: #333;
+    border-radius: 10px;
 }
