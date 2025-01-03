@@ -26,10 +26,62 @@ nav a:hover {
     text-decoration: underline;
 }
 .container {
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 2rem auto;
     padding: 0 1rem;
     /* min-height: 100vh; */
+}
+.box{
+    width: auto;
+    background-color: #f8f8ff;
+    border-radius: 15px;
+    height: auto;
+    margin: 0 10px;
+    padding: 10px; 
+    margin-bottom: 20px;
+}
+.side_box {
+    width: calc(50% - 20px); /* Set the width of the boxes to 50%, accounting for the margins */
+    height: auto; /* Allow the height to expand with content */
+    margin: 0 10px; /* Minimum space between boxes and from container's edge */
+    padding: 10px; /* Internal padding for the content */
+    /* border: 2px solid black; */
+    border-radius: 15px;
+    background-color: #f8f8ff;
+    box-sizing: border-box; /* Include padding and border in the box's total width/height */
+    display: flex;
+    flex-direction: column; /* Align content vertically */
+    justify-content: flex-start; /* Align content to the top */
+    align-items: flex-start; /* Align content to the left */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.side_box p {
+    margin: 0; /* Remove default margin from paragraphs */
+}
+.side_box_inside {
+    width: calc(50% - 20px); /* Set the width of the boxes to 50%, accounting for the margins */
+    height: auto; /* Allow the height to expand with content */
+    margin: 0 10px; /* Minimum space between boxes and from container's edge */
+    padding: 10px; /* Internal padding for the content */
+    /* border: 2px solid black; */
+    border-radius: 15px;
+    background-color: #f8f8ff;
+    box-sizing: border-box; /* Include padding and border in the box's total width/height */
+    display: flex;
+    flex-direction: column; /* Align content vertically */
+    justify-content: flex-start; /* Align content to the top */
+    align-items: flex-start; /* Align content to the left */
+}
+.side_box_inside p,h3{
+    margin: 0; /* Remove default margin from paragraphs */
+}
+.box_container {
+    display: flex; /* Use flexbox */
+      justify-content: space-between; /* Ensure space between the boxes */
+      width: 100%; /* Make the container take full width */
+      padding: 0 10px; /* Add padding to container for space between boxes and sides */
+      box-sizing: border-box; /* Ensure padding is considered in the total width */
+      flex-wrap: wrap; /* Allow the boxes to expand vertically */
 }
 section {
     margin-bottom: 2rem;
@@ -40,6 +92,9 @@ section {
 }
 h2 {
     color: #004d99;
+}
+h3 {
+    margin-top: 0;
 }
 footer {
     text-align: center;
@@ -59,18 +114,31 @@ footer {
 .project p {
     margin: 0.5rem 0;
 }
-.skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-}
-.skill {
-    background: #e0e7ff;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-}
-.profile-photo {
-    width: 100%;
+
+.project-photo {
+    width: 20%;
     border: #333;
     border-radius: 10px;
+    margin-right: 15px;
+    height: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.logo{
+    width: 20px;
+    max-height:20px;
+}
+.left-image {
+    float: left; /* Float the image to the left */
+    margin-right: 15px; /* Add some space between the image and the text */
+    width: 30%; /* Set the width of the image */
+    height: auto; /* Maintain aspect ratio */
+  }
+.flex-container {
+    display: flex; /* Use flexbox layout */
+    align-items: flex-start; /* Align items at the start of the container */
+}
+.text{
+    flex:1;
 }
