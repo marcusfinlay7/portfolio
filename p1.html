@@ -18,12 +18,128 @@
     </nav>
     <div class="container">
         <section>
-            <h2>Project Narrative</h2>
-            <p>Details about the P-1 project, including objectives, outcomes, and multimedia.</p>
+            <h2>Project Overview</h2>
+            <h3>There were three main functions our project had to acomplish</h3>
+            <div class="box-no-link">
+                <h3>Function 1</h3>
+                <p>Utilize Q-arm to transport luggage from the conveyor belt which was a rotary table that held the mini luggage to either the rejection bin or to the airport baggage tunnel (Plate A). The lugagge is also scanned before being grabbed the Q-arm to determine its destination.</p>
+                <div class="image-container">
+                    <figure class="image-item">
+                        <img src="pictures/project1/platfom-edited-better.png" alt="Marcus Finlay" class="photo">
+                        <figcaption>Platform</figcaption>
+                    </figure>
+                    <figure class="image-item">
+                        <img src="pictures/project1/Qarm.jpg" alt="Marcus Finlay" class="photo">
+                        <figcaption>Q-arm</figcaption>
+                    </figure>
+                </div>
+                <p>We accomplised this by scaning the bar code of the luggage which would return a string of text saying "platform" or "rejection bin".
+                    It then used a conditional statment to tell the arm to go to either the rejection bin or the platform after grabbing the luggage.
+                    An idea I had which helped us greatly in the end was to use individual movement commands for the Q-arm instead of coordinates.
+                    This is because when using coordinates the Q-arm will take variable paths to get there and would sometimes hit things along the way.
+                    Using indivudal movement commands we were able to ensure the Q-arm took the same path everytime.
+                </p>    
+            </div>
+            <div class="box-no-link">
+                <h3>Function 2</h3>
+                <p>Transport the luggage from the airport baggage tunnel (plate A) to the plane baggage storage (plate B) using a specialized mechanism. There is also a restriction line in which the mechanims cannot cross while it is in the initial position.</p>
+                <div class="image-container">
+                    <figure class="image-item">
+                        <img src="pictures/project1/mechanism-up.PNG" alt="Marcus Finlay" class="photo">
+                        <figcaption>Mechanism in raised position</figcaption>
+                    </figure>
+                    <figure class="image-item">
+                        <img src="pictures/project1/mechanism-down.PNG" alt="Marcus Finlay" class="photo">
+                        <figcaption>Mechanism in lowered position</figcaption>
+                    </figure>
+                </div>
+                <p>
+                    Our team's design acomplished this with a linear actuator positioned below the slide which can extend and retract to move the slide out of the restricted area. 
+                    When in the lowered position the Q-arm drops the luggage on the top and it slides down to the bottom.
+                    This is the part of the project where I spent most of my time.
+                    I created multiple prototypes for this design as well as another design concept that we ended up not using in the end.
+                </p>
+                <figure class="image-item">
+                    <img src="pictures/project1/P1 gif.gif" alt="Marcus Finlay" class="full-width-photo">
+                    <figcaption>Final working design</figcaption>
+                </figure>    
+            </div>
+            <div class="box-no-link">
+                <h3>Function 3</h3>
+                <p>Proccess and display airplane and passenger data in a visual summary using python and turtle graphics.</p>
+                <figure class="image-item">
+                    <img src="pictures/project1/graphical summary.png" alt="Marcus Finlay" class="full-width-photo">
+                    <figcaption>Graphical summary of our proccessed data</figcaption>
+                </figure>
+                <p>
+                Our team's code proccessing works by reading the two files called passenger data and fleet data. It then uses 5 different functions to count things individually.
+                These functions are daily data, fleet data, oversold, overweight, and layover. 
+                The one I did daily data works by reading the passenger list and saving all of the different gate numbers. 
+                It then counts how many business and economy passengers are at each gate. 
+                From there it reads which planes are at which gates. 
+                Finally it outputs a list of each plane and how many business and economy passengers there are.
+                This data isn't directly displayed in the graphical summary but it is used in the oversold function made by someone else in our group.
+                The graphical funtion takes the data from all of our teams functions and displays it in boxes for for each plane.
+                </p>
+            </div>
         </section>
         <section>
             <h2>Reflection</h2>
-            <p>Insightful reflections about the P-1 project outcomes and learning experience.</p>
+            <div class="box-no-link">
+                <h3>Design</h3>
+                <p>
+                    During the design proccess we went through many iterations. 
+                    The main difference between our original ideas and the final product is the actuator we used.
+                    In prototype 1 we used a rotary actuator and a string to lift the bridge.
+                    The rotary actuator's power was insufficient and there were stability issues with the platform the rotary actuator was mounted on.
+                    There was also the issue of how we were going to drop off the luggage onto the ramp without hitting platform.
+                    So because of this we swithced to the linear actuator sovling both our problems.
+                    The only other issue was the connection of the linear actuator with the slide.
+                    To solve this I created a rail under the slide for a piece mounted to the linear actuator to follow.
+                    For the second prototype we were pretty confident in the design functioning as intended.
+                    However during testing the linear actuator was unstable and would push itself over.
+                    To solve this we added a support to the side of it to ensure it was completely stable for our presentation.
+                </p>
+                <div class="image-container">
+                    <figure class="image-item">
+                        <img src="pictures/project1/P1-prototpye1-screenshot.png" alt="Marcus Finlay" class="photo">
+                        <figcaption>Prototpye 1 with rotary actuator</figcaption>
+                    </figure>
+                    <figure class="image-item">
+                        <img src="pictures/project1/P1-prototpye2-screenshot.png" alt="Marcus Finlay" class="photo">
+                        <figcaption>Prototpye 2 with not enough support</figcaption>
+                    </figure>
+                </div>
+                <p>
+                    Looking back, this design can be made much less complicated. 
+                    Instead of a rail and an attachment for the linear actuator we could have simply placed the linear acutator underneath pushing directly on the slide.
+                    During testing we were able to get the slide to go up without the rails and attachment.
+                    The reason we kept the rails and attachment was becasuse the slide wansn't clearing the restriction line without them.
+                    Another choice we could hae made differently was actually continuing with the rotary actuator design.
+                    In hindsight, we were able to see other groups that used the linear actuator successfully. 
+                    This lead us to believe our original design could have worked with some small alterations.
+                </p>    
+            </div>
+            <div class="box-no-link">
+                <h3>Code</h3>
+                <p>
+                    Overall the coding section of our project went very smooth as we ran into little to no issues.
+                    We were all able to create our individual functions in a timely manner.
+                    As for the team functions we had a few issues with reading the passenger and fleet data files originally.
+                    This is mainly because of our inexperience with reading files in python.
+                    In the end, we realized that all we needed to do was read each line of the file, remove unnecessary information such as spaces and commas, and append each processed line to a list.
+                </p>
+                <div class="image-container">
+                    <figure class="image-item">
+                        <img src="pictures/project1/passenger-data-small.png" alt="Marcus Finlay" class="photo">
+                        <figcaption>Screenshot of part of Passenger Data</figcaption>
+                    </figure>
+                    <figure class="image-item">
+                        <img src="pictures/project1/fleet-data.png" alt="Marcus Finlay" class="photo">
+                        <figcaption>Screenshot of Fleet Data</figcaption>
+                    </figure>
+                </div>
+            </div>
         </section>
     </div>
     <footer>

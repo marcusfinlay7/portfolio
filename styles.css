@@ -39,7 +39,35 @@ nav a:hover {
     margin: 0 10px;
     padding: 10px; 
     margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    color: #333;
+    cursor:pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+.box:hover{
+    transform: scale(1.02);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+.box:hover  .gif-container{
+    background-image: url("pictures/project1/P1 gif.gif");
+}
+.gif-container {
+    width: 20%;
+    padding-bottom: 12.5%; /* Adjust this to maintain desired aspect ratio */
+    background-image: url('pictures/project1/P1 gif.png'); /* Static image */
+    background-size: cover;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    border-radius: 15px;
+    transition: background-image 0.3s ease-in-out;
+    position: relative; /* Ensure it behaves like a block element */
+}
+.box-link {
+    display: block; /* Make the anchor tag behave like a block element */
+    text-decoration: none; /* Remove underline from the link */
+}
+
 .side_box {
     width: calc(50% - 20px); /* Set the width of the boxes to 50%, accounting for the margins */
     height: auto; /* Allow the height to expand with content */
@@ -58,6 +86,7 @@ nav a:hover {
 .side_box p {
     margin: 0; /* Remove default margin from paragraphs */
 }
+
 .side_box_inside {
     width: calc(50% - 20px); /* Set the width of the boxes to 50%, accounting for the margins */
     height: auto; /* Allow the height to expand with content */
@@ -72,8 +101,19 @@ nav a:hover {
     justify-content: flex-start; /* Align content to the top */
     align-items: flex-start; /* Align content to the left */
 }
+.side_box_inside ul li{
+    margin: 8px; /* Remove default margin from paragraphs */
+}
 .side_box_inside p,h3{
     margin: 0; /* Remove default margin from paragraphs */
+}
+.side_box_inside.first {
+    width: calc(70% - 20px); /* 70% width minus margins */
+}
+
+/* Second box (30% width) */
+.side_box_inside.second {
+    width: calc(30% - 20px); /* 30% width minus margins */
 }
 .box_container {
     display: flex; /* Use flexbox */
@@ -141,4 +181,55 @@ footer {
 }
 .text{
     flex:1;
+}
+.box-no-link{
+    width: auto;
+    background-color: #f8f8ff;
+    border-radius: 15px;
+    height: auto;
+    margin: 0 10px;
+    margin-top:10px;
+    padding: 10px; 
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.photo {
+    width: auto;
+    border: #333;
+    border-radius: 10px;
+    margin-right: 15px;
+    height: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.image-container {
+    width: 100%;
+    display: flex; /* Align images side by side */
+    align-items: center; /* Align images vertically */
+}
+.image-container .photo {
+    width: 100%;
+    height: auto; /* Set a uniform height */
+    object-fit: cover; /* Ensure the images are not distorted */
+}
+.container .image-container{
+    justify-content: center; /* Center content horizontally */
+      align-items: center; /* Center content vertically */
+}
+.image-item {
+    text-align: center; /* Center-align image and caption */
+    margin: 0 10px; /* Add spacing between image items */
+}
+.full-width-photo {
+    width: 98%;
+    border: #333;
+    border-radius: 10px;
+    margin-right: 15px;
+    height: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
 }
