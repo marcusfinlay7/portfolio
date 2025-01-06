@@ -4,6 +4,7 @@ body {
     padding: 0;
     background-color: #f4f4f9;
     color: #333;
+    box-sizing: border-box;
 }
 header {
     background-color: #004d99;
@@ -69,15 +70,15 @@ nav a:hover {
 }
 
 .side_box {
-    width: calc(50% - 20px); /* Set the width of the boxes to 50%, accounting for the margins */
+    width: calc(49.5% - 20px);
     height: auto; /* Allow the height to expand with content */
     margin: 0 10px; /* Minimum space between boxes and from container's edge */
-    padding: 10px; /* Internal padding for the content */
-    /* border: 2px solid black; */
+    padding: 20px; /* Internal padding for the content */
     border-radius: 15px;
     background-color: #f8f8ff;
     box-sizing: border-box; /* Include padding and border in the box's total width/height */
     display: flex;
+    gap: 3px;
     flex-direction: column; /* Align content vertically */
     justify-content: flex-start; /* Align content to the top */
     align-items: flex-start; /* Align content to the left */
@@ -85,6 +86,10 @@ nav a:hover {
 }
 .side_box p {
     margin: 0; /* Remove default margin from paragraphs */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
 }
 
 .side_box_inside {
@@ -117,11 +122,11 @@ nav a:hover {
 }
 .box_container {
     display: flex; /* Use flexbox */
-      justify-content: space-between; /* Ensure space between the boxes */
-      width: 100%; /* Make the container take full width */
-      padding: 0 10px; /* Add padding to container for space between boxes and sides */
-      box-sizing: border-box; /* Ensure padding is considered in the total width */
-      flex-wrap: wrap; /* Allow the boxes to expand vertically */
+    justify-content: space-between; /* Ensure space between the boxes */
+    width: 100%; /* Make the container take full width */
+    padding: 0 30px; /* Add padding to container for space between boxes and sides */
+    box-sizing: border-box; /* Ensure padding is considered in the total width */
+    flex-wrap: wrap; /* Allow the boxes to expand vertically */
 }
 section {
     margin-bottom: 2rem;
@@ -130,8 +135,12 @@ section {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+p{
+    padding-left: 20px;
+}
 h2 {
     color: #004d99;
+    padding: 0 20px;
 }
 h3 {
     margin-top: 0;
@@ -166,8 +175,8 @@ footer {
     margin-left: 10px;
 }
 .logo{
-    width: 20px;
-    max-height:20px;
+    width: 22px;
+    max-height:22px;
 }
 .left-image {
     float: left; /* Float the image to the left */
@@ -189,7 +198,7 @@ footer {
     height: auto;
     margin: 0 10px;
     margin-top:10px;
-    padding: 10px; 
+    padding: 25px; 
     margin-bottom: 20px;
     transition: transform 0.3s ease;
     color: #333;
@@ -232,4 +241,19 @@ footer {
     margin-bottom: 10px;
     margin-top: 10px;
     margin-left: 10px;
+}
+figcaption{
+    font-style: italic;
+}
+.box-no-link-bruh{
+    width: auto;
+    background-color: #f8f8ff;
+    border-radius: 15px;
+    height: auto;
+    margin: 0 10px;
+    padding: 15px; 
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
