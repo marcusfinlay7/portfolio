@@ -27,7 +27,7 @@ nav a:hover {
     text-decoration: underline;
 }
 .container {
-    max-width: 1600px;
+    max-width: 60%;
     margin: 2rem auto;
     padding: 0 1rem;
     /* min-height: 100vh; */
@@ -184,9 +184,20 @@ footer {
     width: 30%; /* Set the width of the image */
     height: auto; /* Maintain aspect ratio */
   }
+  .right-image {
+    float: right; /* Float the image to the left */
+    margin-left: 15px; /* Add some space between the image and the text */
+    width: 30%; /* Set the width of the image */
+    height: auto; /* Maintain aspect ratio */
+  }
 .flex-container {
     display: flex; /* Use flexbox layout */
     align-items: flex-start; /* Align items at the start of the container */
+}
+.flex-container2 {
+    display: flex; /* Use flexbox layout */
+    align-items: flex-start; /* Align items at the start of the container */
+    flex-direction: column;
 }
 .text{
     flex:1;
@@ -210,6 +221,26 @@ footer {
     border-radius: 10px;
     margin-right: 15px;
     height: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.bruh-photo {
+    width: auto;
+    border: #333;
+    border-radius: 10px;
+    margin-right: 15px;
+    height: 320px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.bruh-photo-2 {
+    width: auto;
+    border: #333;
+    border-radius: 10px;
+    margin-right: 15px;
+    height: 400px;
     margin-bottom: 10px;
     margin-top: 10px;
     margin-left: 10px;
@@ -256,4 +287,5 @@ figcaption{
     transition: transform 0.3s ease;
     color: #333;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    align-items: center;
 }

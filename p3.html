@@ -3,27 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>P-1</title>
+    <title>Project 3</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Engineering Portfolio - Project 3</h1>
+        <h1>Project 3 - Power in Community</h1>
     </header>
     <nav>
-        <a href="index.html">Home</a>
+        <a href="index.html">Home</a>s
         <a href="p1.html">Project 1</a>
         <a href="p2.html">Project 2</a>
         <a href="p3.html">Project 3</a>
         <a href="sources.html">Sources</a>
     </nav>
     <div class="container">
-        <div class="container">
-            <section>
-                <h2>Project 3</h2>
-                <p>Work In Progress</p>
-            </section>
-        </div>
+        <section>
+            <h2>Project Overview</h2>
+            <div class="box-no-link">
+                <h3>Summary</h3>
+                <p>
+                    This project's goal was to design a product that could assist Kimberly, a 59-year-old woman with Usher Syndrome, in overcoming difficulties in her daily life caused by the condition’s effects on her hearing and vision. The project began with a dedicated inquiry period to determine Kimberly’s specific needs. We then chose a particular challenge she was facing and focused our design around that. From there, we began iteratively developing prototypes while actively incorporating user feedback from design reviews. The project culminated in a pitch presentation showcasing our finished product.
+                </p>   
+            </div>
+            <div class="box-no-link">
+                <h3>Problem Statement</h3>
+                <p>
+                    After hearing Kimberly’s story and asking follow-up questions, we came up with this problem statement to focus our efforts:
+                </p>
+                <p> 
+                    Kimberly is a 59-year-old woman with Usher Syndrome, which causes hearing loss and visual impairment, specifically to the peripheral field of view. The condition directly impacts her ability to navigate busy and unfamiliar environments. Her current assistive technologies fail to sufficiently aid her real-time spatial awareness. To improve her quality of life and independence, the design should be able to effectively detect obstacles in her periphery and inform her through a user friendly interface without limiting mobility or disrupting other aspects of her day-to-day life. 
+                </p>
+            </div>
+            <div class="box-no-link">
+                <h3>Intial Concept</h3>
+                <p>
+                    After much consideration and many sketches, we decided on a necklace-style design with sensors pointing into the peripheral field. The specific type of sensor and user feedback method were still undecided. Our options included ultrasonic, infrared, or LiDAR sensors, and for feedback we considered either a speaker or vibration motors.
+                </p>
+                <figure class="image-item">
+                    <img src="pictures/project3/Ultrasonic Necklace.PNG" alt="Marcus Finlay">
+                    <figcaption>Figure 1: Most Feasible Initial Sketch </figcaption>
+                </figure>
+            </div>
+            <div class="box-no-link">
+                <h3>Prototype 1</h3>
+                <p>
+                    For our first prototype, we focused entirely on the electronics and code, aiming to create a working system before building the casing. We successfully read distances using ultrasonic sensors and decided to keep them for the next version. However, our decision to use a buzzer to inform the user of surroundings proved ineffective. We attempted to use different sound frequencies to indicate which side had an obstacle, but they weren’t distinct enough to be recognizable.
+                </p>
+                <figure class="image-item">
+                    <img src="pictures/project3/Prototype 1.PNG" alt="Marcus Finlay">
+                    <figcaption>Figure 2: Prototype 1</figcaption>
+                </figure>
+            </div>   
+            <div class="box-no-link">
+                <h3>Prototype 2</h3>
+                <p>
+                    In our second prototype, we addressed the feedback method. We replaced the buzzer with two vibration motors. When a sensor detects an object one meter away, the corresponding motor begins vibrating at its lowest speed, increasing as the object gets closer. This allowed the user to feel their surroundings and navigate without peripheral vision.
+                </p>
+                <p>
+                    However, we discovered a new problem: interference. In some areas, ultrasonic readings became inaccurate due to high-frequency background noise often inaudible but at the same frequency the sensors use. This interference caused false readings. Our workaround was to lower the detection range to preserve accuracy. Fortunately, this issue only affected a few locations on campus; the device still worked well in outdoor and crowded environments.
+                </p>
+                <figure class="image-item">
+                    <img src="pictures/project3/Prototype 2.PNG" alt="Marcus Finlay">
+                    <figcaption>Figure 3: Prototpye 2</figcaption>
+                </figure>
+            </div>
+            <div class="box-no-link">
+                <h3>Final Prototype</h3>
+                <p>
+                    No changes were made to the code after Prototype 2, as it was functioning as intended. However, we added a power switch to the circuit so the battery didn’t need to be disconnected. For the physical build, we 3D printed a lightweight casing, glued parts together, and attached the top using neodymium magnets to allow easy access to the electronics. The strap was repurposed from a Nike bag and hooked around the casing.
+                </p>
+                <P>
+                    With these changes, our design was finalized. We recorded a video and gave our final pitch presentation.         
+                </p>
+                <figure class="image-item">
+                    <img src="pictures/project3/Final Prototype.jpg" alt="Marcus Finlay" class = "bruh-photo-2">
+                    <figcaption>Figure 4: Final Prototpye</figcaption>
+                </figure>
+            </div> 
+            <div class="box-no-link">
+                <h3>My Contributions</h3>
+                <p>
+                    In this project, my role was to get the electronics and code working. I designed and built all of the prototypes, except for the CAD model of the final prototype. I worked with an Arduino UNO and wired everything together using jumper wires. Although there are too many to list, I went through at least 10–20 iterations of the code due to various issues with sensor noise.
+
+Some notable problems I was able to solve included sensor misreadings that caused the vibrations to trigger at incorrect times, implementing variable control of the vibration motors using PWM, and mapping distances to meaningful PWM values.
+
+I also worked with one of my group members on a PCB design using an ATtiny1616 microchip, which would have significantly miniaturized our design, but we were unable to get it working in time. Lastly, I created the entire showcase video by myself to present the final product.
+                </p>
+            </div>
+            <div class="box-no-link">
+                <h3>Video</h3>
+                <iframe width="1000" height="600" src="https://www.youtube.com/embed/FhJ3oLNV03w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>    
+
+        </section>
+        <section>
+            <h2>Reflection</h2>
+            <div class="box-no-link">
+                <p>
+                    Our device worked as intended, but it's far from the best version this concept could become. If I had access to better sensors, I believe that LiDAR time-of-flight sensors would have been far more effective. Combined with higher-quality vibration motors, this device could become a truly useful assistive tool.
+
+Due to project constraints, we couldn’t implement these features. As it stands, the readings aren’t accurate enough, and the haptic feedback isn’t distinct enough to navigate without vision. Completing the PCB would also have helped reduce the overall size and cost.
+
+That said, given the time and resources we had, I don’t believe I could’ve done a much better job. I’m proud of what we achieved under the circumstances.
+                    
+                </p> 
+            </div>
+        </section>
     </div>
     <footer>
         <p>&copy; 2025 Marcus Finlay All rights reserved.</p>

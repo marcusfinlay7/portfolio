@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Image and Text Layout</title>
+<style>
+.container {
+  overflow: auto; /* Clear floats */
+}
+
+.text-section {
+  width: 50%;
+  float: left;
+  padding-right: 20px; /* Optional spacing */
+  box-sizing: border-box; /* Include padding in width */
+}
+
+.image-section {
+  width: 50%;
+  float: right;
+  box-sizing: border-box; /* Include padding in width */
+}
+
+.image-section img {
+  display: block; /* Remove extra space below inline images */
+  width: 100%; /* Make image fill its container */
+  height: auto; /* Maintain aspect ratio */
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="text-section">
+    <h2>Left Side Text</h2>
+    <p>This is some text on the left side of the layout. You can add more content here. This layout uses the float property to position the text and image side by side.</p>
+    <p>More text can go here to demonstrate how the left section will occupy 50% of the container width.</p>
+  </div>
+  <div class="image-section">
+    <img src="your-image.jpg" alt="Your Image">
+  </div>
+</div>
+
+</body>
+</html>

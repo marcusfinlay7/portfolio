@@ -3,24 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>P-1</title>
+    <title>Project 2</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Engineering Portfolio - Project 2</h1>
+        <h1>Project 2 - Wastewater Filtration</h1>
     </header>
     <nav>
         <a href="index.html">Home</a>
-        <a href="p1.html">P-1</a>
-        <a href="p2.html">P-2</a>
-        <a href="p3.html">P-3</a>
+        <a href="p1.html">Project 1</a>
+        <a href="p2.html">Project 2</a>
+        <a href="p3.html">Project 3</a>
         <a href="sources.html">Sources</a>
     </nav>
     <div class="container">
         <section>
-            <h2>Project 2</h2>
-            <p>Work In Progress</p>
+            <h2>Project Overview</h2>
+            <div class="box-no-link">
+                <h3>Summary</h3>
+                <p>
+                    In this project our team worked together to design a filtration component for wastewater treatment.
+                    Focusing on material selection and filter porosity, we addressed the scenario of a hospital in Byron Bay, Australia, tasked with removing antibiotic waste from its effluent. 
+                    Through research and material analysis using ANSYS-Granta EduPack, we successfully identified an optimal material and its corresponding porosity for this application. 
+                    The creation of a life cycle diagram for the selected material was another aspect of our investigation that focused on environmental factors.
+
+                </p>   
+            </div>
+            <h3>There were five main milestones that our group accomplished:</h3>
+            <div class="box-no-link">
+                <h3>Problem Statement</h3>
+                <p>
+                    The increasing use of antibiotics in modern medicine and their release into the environment has led to several ecological and human health concerns. 
+                    In hospitals there are many people using antibiotics. This leads to a high concentration of ciprofloxacin in the hospital wastewater. 
+                    The buildup of these antibiotics in wastewater treatment plants leads to antibiotic resistant bacteria and genes. 
+                    A filtration system is required that not only efficiently removes these contaminants but also aligns with environmental regulations and healthcare standards. 
+                    The primary objectives for this system include achieving cost-effectiveness, ensuring the safety of the treated water, and promoting environmental sustainability. 
+                    This can be done through low energy consumption and minimal carbon footprint. Constraints involve compliance with safety standards.  
+                </p>
+            </div>
+            <div class="box-no-link">
+                <h3>Metrics</h3>
+                <div class="flex-container">
+                    <div class = "flex-container2">
+                        <p>
+                            The three main metrics we used to judge the success of our filter, along with the methods for measuring them, were:
+                        </p>
+                        <ul style="list-style-type: disc;">
+                            <li>Cost - We compared the cost of our filter to the market price</li>
+                            <li>Water Purity - Ensure the ciprofloxacin levels are at an acceptable level</li>
+                            <li>Flow Rate - Aim for as high a flow rate without compromising the structural integrity</li>
+                        </ul>
+                    </div>
+                    <div class= "right-image">
+                        <img src="pictures/project2/Water filter.avif" alt="Marcus Finlay" class="full-width-photo">
+                    </div>
+                </div>
+            </div>
+            <div class="box-no-link">
+                <h3>Material Selection</h3>
+                <p>
+                    Since polyethylene has remarkable chemical resistance especially against hydrocarbons, alcohols, bases, and strong acids, we chose it as the best material for our antibiotic filtering wastewater treatment system. 
+                    This means that polyethylene won't break down when exposed to high concentrations of antibiotics, such as ciprofloxacin. 
+                    Beyond its resistance, polyethylene has many benefits, such as simplicity of maintenance because of its smooth, non-porous hydrophobic surface, which inhibits biofouling and prolongs the filter's useful life. 
+                    Due to its great tensile strength and endurance, it can tolerate frequent cleaning cycles and variations in water pressure without shedding a lot of microplastics, which is a known issue with other polymers like polypropylene and polystyrene.
+                    Polyethylene is also a safe option for wastewater applications due to its low toxicity and limited release of hazardous compounds, as well as its FDA and EFSA food safety certification. 
+                    Lastly, because of its great recyclability, which reduces overall waste creation by enabling the reuse of manufacturing waste and the possibility of repeatedly cleaning and reusing the filters themselves, it is in line with environmental sustainability.
+                </p>
+                <div class="image-container">
+                    <figure class="image-item">
+                        <img src="pictures/project2/micrograph of porus polyethylene.png" alt="Marcus Finlay" class="bruh-photo">
+                        <figcaption>Figure 1: Micrograph of porous polyethylene</figcaption>
+                    </figure>
+                    <figure class="image-item">
+                        <img src="pictures/project2/polyethylene.jfif" alt="Marcus Finlay" class="bruh-photo">
+                        <figcaption>Figure 2: Polyethylene Beads</figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="box-no-link">
+                <h3>Porosity Calculations</h3>
+                <p>
+                    A target porosity of 40% was selected for the polyethylene filter after calculations revealed that 50% produced insufficient strength according to the Ashby chart in Granta EduPack. 
+                    However 40% produced a yield strength of 8.442 MPa, which was only marginally below the MPI line which means the strength at 40% porosity is high enough. 
+                    The flow rate would be adversely affected if the porosity were further reduced in order to boost strength. In order to ensure that the pores are smaller than the smallest contaminant, the pore size was selected at 3μm to successfully filter pollutants ranging from 5-10μm. 
+                    This choice strikes a balance between preserving an appropriate flow rate and the requirements for adequate strength and efficient pollutant removal.
+                </p>
+                <figure class="image-item">
+                    <img src="pictures/project2/porosity calculations.jpg" alt="Marcus Finlay" class="bruh-photo-2">
+                    <figcaption>Figure 3: Porosity Calculations</figcaption>
+                </figure>
+                <p>
+                    This is the part of the project that I contributed the most to. 
+                    More specifically I conducted research on the manufacturing of porous polyethylene and found that it is typically produced at around 40-50% porosity.
+                    This makes our porosity selection entirely feasible.
+                    I also conducted the calculations required to measure the strength of the filter using an Ashby chart and an MPI line.
+                </p>
+            </div>
+            <div class="box-no-link">
+                <h3>Eco Audit</h3>
+                <p>
+                    Polyethylene is the best material for the filter even though the Eco-audits show that it has a greater environmental impact than the other material candidates (mostly because Granta EduPack does not have production data for the latter two). 
+                    This is due to the audits' failure to take into consideration the energy and carbon footprint associated with the production of the other materials, which suggests that their true impact may be substantial. 
+                    This lack of data was a result of Granta not including the production data of the other material candidates.
+                    However, because it can be recycled, reused, and disposed of more easily, polyethylene has the most end-of-life potential. 
+                    More significantly, its resilience in weak and watery settings and its ability to be manufactured into a filter result in a longer lifespan and fewer replacements. 
+                    When compared to less resilient options like our other materials, its longer lifespan eventually lessens its overall environmental impact.
+                </p>
+                <figure class="image-item">
+                    <img src="pictures/project2/polyethylene eco audit.PNG" alt="Marcus Finlay">
+                    <figcaption>Figure 4: Eco Audit</figcaption>
+                </figure>
+                <p>
+                    Second only to my contributions to the porosity calculations, I also contributed significantly to the Eco Audit.
+                    This is because we all audited different materials and the one that I did ended up being polyethylene.
+                    This meant that information I gathered was extremely important to the final selection.
+                    I was also one of the people in our group to still push for polyethylene despite its poor results on the Eco Audit.
+                    As stated above I believe it was because of missing information in Granta that polyethylene was made to look much worse than our other options.
+                </p>
+            </div>       
+        </section>
+        <section>
+            <h2>Reflection</h2>
+            <div class="box-no-link">
+                <p>
+                    Our filtering system design for Project Two was a highly iterated process rather than a linear one. 
+                    Initial material selections were problematic because as the project progressed we considered more factors and were forced to reconsider previous decisions.
+                    This called for a rigorous reassessment of our presumptions and a more thorough investigation of substitute materials. 
+                    This cycle, which included theoretical testing with tools such as Granta EduPack, and ultimately proved crucial in improving our understanding of these materials enabling us to make a more informed final material choice for the filter. 
+                    This emphasizes how crucial it is to be adaptable and open to reevaluating early concepts during the engineering design process.
+                </p> 
+            </div>
         </section>
     </div>
     <footer>
