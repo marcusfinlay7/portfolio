@@ -56,12 +56,12 @@ export const CourseExplorer = () => {
 
     return (
         <div className="overflow-hidden rounded-2xl border border-border bg-card">
-            <div className="grid md:h-[29rem] md:grid-cols-[15.5rem_1fr] lg:h-96">
-                <aside className="border-b border-border px-3.5 py-5 md:overflow-y-auto md:overscroll-contain md:border-r md:border-b-0 md:[scrollbar-color:var(--border)_transparent] md:[scrollbar-width:thin]">
+            <div className="grid md:h-116 md:grid-cols-[15.5rem_1fr] lg:h-96">
+                <aside className="border-b border-border px-3.5 py-5 md:overflow-y-auto md:overscroll-contain md:border-r md:border-b-0 md:[scrollbar-color:var(--border)_transparent] md:scrollbar-thin">
                     <p className="px-2 pb-2 font-mono text-[10px] tracking-[0.16em] text-muted-foreground/70">
                         SEMESTERS
                     </p>
-                    <div className="grid gap-[5px] sm:grid-cols-2 md:grid-cols-1">
+                    <div className="grid gap-1.25 sm:grid-cols-2 md:grid-cols-1">
                         {terms.map((term) => {
                             const isActive = term.label === activeTerm?.label
 
@@ -78,7 +78,7 @@ export const CourseExplorer = () => {
                                             : "border-border bg-transparent",
                                     )}
                                 >
-                                    <span className="flex min-w-0 flex-col gap-[3px]">
+                                    <span className="flex min-w-0 flex-col gap-0.75">
                                         <span
                                             className={cn(
                                                 "text-sm font-semibold",
@@ -105,7 +105,7 @@ export const CourseExplorer = () => {
                     </div>
                 </aside>
 
-                <div className="px-4 py-5 sm:px-6 md:py-[22px]">
+                <div className="px-4 py-5 sm:px-6 md:py-5.5">
                     <div className="flex flex-wrap items-baseline justify-between gap-2">
                         <h4 className="text-[17px] font-semibold text-card-foreground">
                             {activeTerm?.label}
@@ -130,7 +130,7 @@ export const CourseExplorer = () => {
                                     }
                                     aria-pressed={isSelected}
                                     className={cn(
-                                        "flex min-h-21 cursor-pointer flex-col items-start gap-[7px] rounded-[11px] border p-[15px] text-left transition hover:border-primary/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+                                        "flex min-h-21 cursor-pointer flex-col items-start gap-1.75 rounded-[11px] border p-3.75 text-left transition hover:border-primary/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
                                         isSelected
                                             ? "border-primary/50 bg-primary/10"
                                             : "border-border bg-popover",
@@ -151,7 +151,7 @@ export const CourseExplorer = () => {
 
             {selectedCourse ? (
                 <div className="grid gap-7 border-t border-border bg-background/60 px-5 py-6 sm:px-7 md:grid-cols-[1fr_13.125rem] md:items-center">
-                    <div className="flex flex-col gap-[7px]">
+                    <div className="flex flex-col gap-1.75">
                         <p className="font-mono text-[11px] tracking-[0.06em] text-primary">
                             {selectedCourse.code} ·{" "}
                             {getCourseUnits(selectedCourse)} UNITS
@@ -169,7 +169,7 @@ export const CourseExplorer = () => {
                         )}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="rounded-[9px] bg-primary px-4 py-[13px] text-center font-mono text-[11px] tracking-[0.06em] text-primary-foreground transition hover:bg-primary/85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                        className="rounded-[9px] bg-primary px-4 py-3.25 text-center font-mono text-[11px] tracking-[0.06em] text-primary-foreground transition hover:bg-primary/85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                     >
                         COURSE PAGE ↗
                     </a>

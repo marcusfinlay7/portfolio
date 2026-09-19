@@ -6,11 +6,24 @@ export type ProjectCategory = "robotics" | "mechanical" | "software"
 
 export type TocEntry = { id: string; title: string }
 
+export type ProjectImage = {
+    src: string
+    alt: string
+    width: number
+    height: number
+    displayAspectRatio?: string
+}
+
 export type ProjectContent = {
     slug: string
     title: string
     category: ProjectCategory
     description: string
+    image?: ProjectImage
+    comparisonImages?: {
+        left: ProjectImage
+        right: ProjectImage
+    }
     tags: string[]
     metric: string
     /** Tailwind grid column span for the bento layout, e.g. "md:col-span-7" */

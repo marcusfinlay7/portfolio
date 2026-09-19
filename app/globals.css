@@ -140,7 +140,7 @@
     --tx-nav-color: var(--foreground);
 }
 
-.dark.theme-portfolio {
+.dark.theme-default {
     --background: oklch(0.145 0 0);
     --foreground: oklch(0.985 0 0);
     --card: oklch(0.205 0 0);
@@ -176,7 +176,7 @@
     --timeline-glow: rgba(220, 38, 38, 0.18);
 }
 
-.dark.theme-coursework {
+.dark.theme-dark {
     --background: #08080a;
     --foreground: #e8e8ec;
     --card: #0c0c0e;

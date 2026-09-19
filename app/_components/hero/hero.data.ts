@@ -11,4 +11,3 @@ export const hero = {
     ctaPrimary: { label: "View work", href: "#projects" },
     ctaSecondary: { label: "Resume", href: site.resumeUrl },
 }
- 

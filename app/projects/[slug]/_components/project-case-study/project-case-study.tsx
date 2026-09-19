@@ -1,4 +1,5 @@
 import { ArrowLeft, ArrowRight } from "lucide-react"
+import Image from "next/image"
 import Link from "next/link"
 import { SectionHeading } from "@/app/_components/section-heading/section-heading"
 import { Badge } from "@/components/shadcn-ui/badge"
@@ -20,8 +21,17 @@ export const ProjectCaseStudy = ({
     previous,
     next,
 }: ProjectCaseStudyProps) => {
-    const { title, description, eyebrow, caseStudyTags, meta, toc, Body } =
-        project
+    const {
+        title,
+        description,
+        image,
+        comparisonImages,
+        eyebrow,
+        caseStudyTags,
+        meta,
+        toc,
+        Body,
+    } = project
 
     return (
         <main className="min-h-screen text-foreground">
@@ -96,21 +106,72 @@ export const ProjectCaseStudy = ({
                 </section>
 
                 <Card className="overflow-hidden border-primary/20 bg-gradient-to-br from-card via-card to-primary/10">
-                    <CardContent className="grid min-h-[420px] place-items-center p-10 text-center">
-                        <div>
-                            <div className="mx-auto mb-5 grid size-20 place-items-center rounded-2xl border border-dashed border-primary/50 text-3xl text-primary">
-                                ◎
+                    {comparisonImages ? (
+                        <CardContent
+                            className="grid grid-cols-2 divide-x p-0"
+                            style={{
+                                aspectRatio: `${comparisonImages.left.width * 2} / ${comparisonImages.left.height}`,
+                            }}
+                        >
+                            {Object.entries(comparisonImages).map(
+                                ([position, comparisonImage]) => (
+                                    <div
+                                        key={comparisonImage.src}
+                                        className="relative overflow-hidden"
+                                    >
+                                        <Image
+                                            src={comparisonImage.src}
+                                            alt={comparisonImage.alt}
+                                            fill
+                                            sizes="(min-width: 1152px) 576px, 50vw"
+                                            className="object-cover"
+                                            style={
+                                                position === "right"
+                                                    ? {
+                                                          imageRendering:
+                                                              "pixelated",
+                                                      }
+                                                    : undefined
+                                            }
+                                        />
+                                    </div>
+                                ),
+                            )}
+                        </CardContent>
+                    ) : image ? (
+                        <CardContent
+                            className="relative p-0"
+                            style={{
+                                aspectRatio:
+                                    image.displayAspectRatio ??
+                                    `${image.width} / ${image.height}`,
+                            }}
+                        >
+                            <Image
+                                src={image.src}
+                                alt={image.alt}
+                                fill
+                                sizes="(min-width: 1152px) 1152px, 100vw"
+                                className="object-cover"
+                            />
+                        </CardContent>
+                    ) : (
+                        <CardContent className="grid min-h-[420px] place-items-center p-10 text-center">
+                            <div>
+                                <div className="mx-auto mb-5 grid size-20 place-items-center rounded-2xl border border-dashed border-primary/50 text-3xl text-primary">
+                                    ◎
+                                </div>
+                                <h2 className="text-xl font-semibold">
+                                    Hero build photo / video
+                                </h2>
+                                <p className="mt-2 max-w-xl text-sm text-muted-foreground">
+                                    Replace this with a finished-project photo,
+                                    short demo loop, CAD render, or annotated
+                                    engineering image.
+                                </p>
                             </div>
-                            <h2 className="text-xl font-semibold">
-                                Hero build photo / video
-                            </h2>
-                            <p className="mt-2 max-w-xl text-sm text-muted-foreground">
-                                Replace this with a finished-project photo,
-                                short demo loop, CAD render, or annotated
-                                engineering image.
-                            </p>
-                        </div>
-                    </CardContent>
+                        </CardContent>
+                    )}
                 </Card>
 
                 <div className="mx-auto grid max-w-6xl gap-14 py-20 lg:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)]">

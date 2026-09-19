@@ -1,4 +1,5 @@
 import { ArrowUpRight } from "lucide-react"
+import Image from "next/image"
 import Link from "next/link"
 
 import { Badge } from "@/components/shadcn-ui/badge"
@@ -41,10 +42,68 @@ export const ProjectsGrid = () => {
                             aria-label={`Open ${project.title}`}
                             className="absolute inset-0 z-10"
                         />
-                        <div className="grid min-h-56 place-items-center border-b bg-muted/35">
-                            <span className="font-mono text-sm text-muted-foreground">
-                                {project.title} / visual
-                            </span>
+                        <div
+                            className={cn(
+                                "relative grid place-items-center overflow-hidden border-b bg-muted/35",
+                                !project.image &&
+                                    !project.comparisonImages &&
+                                    "min-h-56",
+                            )}
+                            style={
+                                project.comparisonImages
+                                    ? {
+                                          aspectRatio: `${project.comparisonImages.left.width * 2} / ${project.comparisonImages.left.height}`,
+                                      }
+                                    : project.image
+                                      ? {
+                                            aspectRatio:
+                                                project.image
+                                                    .displayAspectRatio ??
+                                                `${project.image.width} / ${project.image.height}`,
+                                        }
+                                      : undefined
+                            }
+                        >
+                            {project.comparisonImages ? (
+                                <div className="absolute inset-0 grid grid-cols-2 divide-x">
+                                    {Object.entries(
+                                        project.comparisonImages,
+                                    ).map(([position, image]) => (
+                                        <div
+                                            key={image.src}
+                                            className="relative overflow-hidden"
+                                        >
+                                            <Image
+                                                src={image.src}
+                                                alt={image.alt}
+                                                fill
+                                                sizes="(min-width: 768px) 29vw, 50vw"
+                                                className="object-cover transition-transform duration-500 group-hover:scale-[1.01]"
+                                                style={
+                                                    position === "right"
+                                                        ? {
+                                                              imageRendering:
+                                                                  "pixelated",
+                                                          }
+                                                        : undefined
+                                                }
+                                            />
+                                        </div>
+                                    ))}
+                                </div>
+                            ) : project.image ? (
+                                <Image
+                                    src={project.image.src}
+                                    alt={project.image.alt}
+                                    fill
+                                    sizes="(min-width: 768px) 58vw, 100vw"
+                                    className="object-cover transition-transform duration-500 group-hover:scale-[1.01]"
+                                />
+                            ) : (
+                                <span className="font-mono text-sm text-muted-foreground">
+                                    {project.title} / visual
+                                </span>
+                            )}
                         </div>
                         <CardHeader>
                             <div className="flex items-start justify-between gap-4">

@@ -12,13 +12,13 @@ export const socialLinks: SocialLink[] = [
     {
         label: "Email",
         icon: "mail",
-        href: "mailto:marcus@example.com",
+        href: "mailto:finlam6@mcmaster.ca",
         description: "The fastest way to reach me directly.",
     },
     {
         label: "GitHub",
         icon: "github",
-        href: "https://github.com/marcusfinlay",
+        href: "https://github.com/marcusfinlay7",
         description: "Code, experiments, and project source.",
     },
     {

@@ -32,9 +32,9 @@ export const metadata: Metadata = {
     description: hero.subhead,
 }
 
-type SiteTheme = "portfolio" | "coursework"
+type SiteTheme = "default" | "dark"
 
-const ACTIVE_THEME: SiteTheme = "coursework"
+const ACTIVE_THEME: SiteTheme = "dark"
 
 const RootLayout = ({ children }: LayoutProps<"/">) => {
     return (
